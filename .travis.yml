@@ -1,0 +1,7 @@
+language: cpp
+sudo: required
+dist: trusty
+os:
+- linux
+compiler:
+  - gcc
