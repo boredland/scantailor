@@ -2,7 +2,7 @@ language: cpp
 sudo: required
 before_install:
   - sudo apt-get install libboost-all-dev
-script:
-  - cmake . && make
 compiler:
   - gcc
+script:
+  - cmake . && make && make test
