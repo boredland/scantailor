@@ -6,7 +6,7 @@ before_install:
 compiler:
 - gcc
 script:
-- cmake clean . && make -j && cd tests && cmake . && cd .. && make -j test
+- cmake clean . && make && cd tests && cmake . && cd .. && make test
 deploy:
   provider: releases
   api_key:
