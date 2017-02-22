@@ -5,12 +5,4 @@ before_install:
 compiler:
   - gcc
 script:
-  - cmake . && cmake test/. && make -j && make test
-deploy:
-  provider: releases
-  api_key:
-    secure: YOUR_API_KEY_ENCRYPTED
-  file: "FILE TO UPLOAD"
-  skip_cleanup: true
-  on:
-    tags: true
+  - cmake . && cmake tests/. && make -j && make test
