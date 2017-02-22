@@ -3,5 +3,5 @@ sudo: required
 dist: trusty
 os:
 - linux
-compiler:
-  - gcc
+script:
+- cmake . && make
