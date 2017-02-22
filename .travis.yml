@@ -2,8 +2,7 @@ language: cpp
 sudo: required
 before_install:
   - sudo apt-get install libboost-all-dev libjpeg-dev zlib1g-dev libpng12-dev libtiff4-dev libxrender-dev
-      mingw32 mingw32-binutils mingw32-runtime
 compiler:
   - gcc
 script:
-  - cmake . && make && mingw32-make
+  - cmake . && make -j
