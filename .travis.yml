@@ -1,8 +1,14 @@
 language: cpp
 sudo: required
 before_install:
-  - sudo apt-get install libboost-all-dev libjpeg-dev zlib1g-dev libpng12-dev libtiff4-dev libxrender-dev
+- sudo apt-get install libboost-all-dev libjpeg-dev zlib1g-dev libpng12-dev libtiff4-dev
+  libxrender-dev
 compiler:
-  - gcc
+- gcc
 script:
-  - cmake . && cmake tests/. && make -j && make test
+- cmake . && cmake tests/. && make -j && make test
+deploy:
+  provider: releases
+  api_key:
+    secure: pVzDX/zN2XdBGKYyzihCdXXpQdoX0aKzOtTY/R7TscfcJ7zLnHKThIeNZH8tgb6bLH9Jr1brfP/ch1DsBU4WixShLQKy4ADWvU6H3zMSLHy1LKmBWgVWam0k8E3pRGPG9nd/Qr7clyYs5vAGaiaySwsWCZ2dgDG8mhbSF4RCJlcd/5Xut5SEmqI/kxuQvTgB1OU5tuV67PuRS/B7ZliAU7VlmgYDlyyHhvVQJJ2mmmUEEaUrX1U37Vu4ow7gUGlhlviqPk8r0osSDwha8id4HrQ3R0fFs0+qvIGS47Pt+xUhHyZS/fAL2XGTRcUlgZAi66fApYTNd+Is//9cCeGmb1jdg9N8dS8dwT2+b9bU7LMsU0bgA8U69LsBkCozfTBzbehGw/RdTAaM+p9aUqGBy9cedPLgCylkRNkXz9HT+KvkarG4dxjwmVMAwlaAWPeyWC61wYcx4ykH+rrKNHW5cWqolKGOXXtJH4aKMz8JjxTw+gse075hjyEcJ+w2S9OG88hsySmM986oFzD4k9lLWCTU9rjx+3cPyWK87lLU0S+kxwNe2HP6/MMhd3oDyNEdkTkNRulBrf3h1vKHf93SKx0sZn0zjZad7+c8YBDV1oqyOVbyMZKydaXCqXkJez4QxCe1cIPjeQ69/xtrmCsUvzZ7gQ2ZKgYTyIA/mypd0KI=
+  file: test.txt
