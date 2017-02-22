@@ -1,6 +1,8 @@
 language: cpp
 sudo: required
 dist: trusty
+install:
+- libboost-dev
 os:
 - linux
 script:
