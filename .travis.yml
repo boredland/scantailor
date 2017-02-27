@@ -7,9 +7,7 @@ compiler:
 - gcc
 script:
 - cmake .
-- make
-- cmake tests/ .
-- make test
+- make && make test
 deploy:
   provider: releases
   api_key:
